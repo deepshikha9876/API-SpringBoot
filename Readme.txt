@@ -1,41 +1,41 @@
-CREATE TABLE responses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    response VARCHAR(10000)
-);
+## CoinApp
+CoinApp is a web application built using Spring Boot, Hibernate, and H2-Database. 
+It allows users to create and update profiles and fetch real-time cryptocurrency data.
 
-// H2 Database
-URL - http://localhost:2025/h2-console
-	JDBC URL: jdbc:h2:mem:testdb
-	User Name: sa
-	Password: sa
-	
-// Register (only body)
-- POST - http://localhost:2025/auth/register
-- Body - raw
-{
-    "firstName":"A",   
-    "lastName":"B",
-    "email":"A1BCEEE",
-    "mobile":"876567",
-    "username":"Akfg",
-    "password":"190"
-}
+## Features
+- User authentication and profile management
+- Fetching real-time cryptocurrency data
+- User-friendly interface
+- Data persistence using MySQL
 
-// Login (params username, password)
-- POST - http://localhost:2025/auth/login?username=Akfg&password=190
+## Clone the repository:
+`git clone https://github.com/deepshikha9876/coinapp.git`
+`cd coinapp`
+Set up the MySQL database:
 
-// GET  (params -symbols)
-- GET - http://localhost:2025/coins/data?symbols=BTC,ETHLTC
-- Bearer token
 
-//Update
-- PUT - http://localhost:2025/profile/update
-- Bearer token
-- Body - raw
-{
-    "firstName":"C",
-    "lastName":"B",
-    "mobile":"9999",
-    "email":"A1BCEEE"
-}
+## Configuration
+Configure the application settings in the src/main/resources/application.properties file as needed.
+
+## Usage
+Access the application at http://localhost:8080.
+Register a new user or log in with an existing account.
+Update your profile and start fetching cryptocurrency data.
+API Endpoints
+User Authentication
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Screenshot
+![GetData-Coin-Data](https://github.com/user-attachments/assets/d874f4f4-261e-4961-a9f9-6ba7a3398862)
+
+![H2-Database](https://github.com/user-attachments/assets/cecba4b3-e8cb-4c37-ab2f-4b5ce83bd048)
+
+![Login](https://github.com/user-attachments/assets/ad5f4a88-e3e2-457b-927a-ef225a1fc760)
+
+![Register](https://github.com/user-attachments/assets/d9cc5069-4714-4aff-8232-df0433bddfcf)
+
+![Screenshot (212)](https://github.com/user-attachments/assets/5aa52ca0-5868-4b41-aa66-d9a539ae4cdb)
+
+![Update](https://github.com/user-attachments/assets/0767cac3-0a7c-478b-9078-8672a04b0bf2)
