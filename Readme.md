@@ -1,33 +1,34 @@
 ## CoinApp
+CoinApp is a comprehensive web application designed to provide users with a seamless experience in managing their profiles and accessing real-time cryptocurrency data. The application leverages the power of Spring Boot for backend development, Hibernate for ORM, and MySQL for data storage, ensuring robust and scalable performance.
+
 CoinApp is a web application built using Spring Boot, Hibernate, and H2-Database. 
 It allows users to create and update profiles and fetch real-time cryptocurrency data.
 
 ## Features
-- User authentication and profile management
+### User authentication and profile management
+- Registration and Login
 - Fetching real-time cryptocurrency data
-- User-friendly interface
-- Data persistence using MySQL
+- Data persistence using H2 Database
 
-## Clone the repository:
+## Clone the repository
 `git clone https://github.com/deepshikha9876/coinapp.git`
-`cd coinapp`
-Set up the MySQL database:
-
 
 ## Configuration
 Configure the application settings in the src/main/resources/application.properties file as needed.
 
+- spring.datasource.url=jdbc:mysql://localhost:2025/coinapp
+- spring.datasource.username=coinappuser
+- spring.datasource.password=yourpassword
+
 ## Usage
-Access the application at http://localhost:8080.
+Access the application at http://localhost:2025.
 Register a new user or log in with an existing account.
 Update your profile and start fetching cryptocurrency data.
-API Endpoints
-User Authentication
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Screenshot
+## Screenshots
 ![GetData-Coin-Data](https://github.com/user-attachments/assets/d874f4f4-261e-4961-a9f9-6ba7a3398862)
 
 ![H2-Database](https://github.com/user-attachments/assets/cecba4b3-e8cb-4c37-ab2f-4b5ce83bd048)
